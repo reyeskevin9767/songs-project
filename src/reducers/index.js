@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux';
+
 // Reducers
 
 // Return All Songs
@@ -18,3 +20,9 @@ const selectSongReducer = (selectedSong = null, action) => {
 
   return selectedSong;
 };
+
+// Store holding all the reducers
+export default combineReducers({
+  songs: songsReducer,
+  selectedSong: selectSongReducer,
+});
