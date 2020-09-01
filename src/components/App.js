@@ -1,5 +1,5 @@
 import React from 'react';
-import { selectSong } from '../actions';
+import SongList from './SongList';
 
 // Reducers specifiy how the application's state changes
 // in response to actions sent to the store
@@ -13,7 +13,15 @@ import { selectSong } from '../actions';
 // Connect function connects a React component to a Redux store
 
 const App = () => {
-  return <div>Hi there</div>;
+  return (
+    <div className="ui container grid" style={{ marginTop: '10px' }}>
+      <div className="ui row">
+        <div className="column eight wide">
+          <SongList />
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default App;
